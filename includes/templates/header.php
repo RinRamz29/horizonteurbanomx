@@ -17,6 +17,7 @@
 
     <link rel="preload" href="/build/css/app.css" as="style">
     <link rel="stylesheet" href="/build/css/app.css">
+    <link rel="icon" type="image/x-icon" href="../../src/img/favicon.ico">
 </head>
 <body>
     
