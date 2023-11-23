@@ -1,0 +1,19 @@
+{
+    "name": "rinra/bienesraices",
+    "description": "Bienes raices",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\" : "./clases"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rin",
+            "email": "rinramz@outlook.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "^2.7"
+    }
+}
