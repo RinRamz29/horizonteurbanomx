@@ -9,5 +9,3 @@ use App\Propiedad;
 $db = conectarDB();
 
 Propiedad::setDB($db);
-
-
