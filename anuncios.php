@@ -9,7 +9,7 @@
     
         <<?php
             $limite = 9;
-            include 'includes/templates/anuncios';
+            include 'includes/templates/anuncios.php';
         ?>
     </main>
 
