@@ -34,7 +34,7 @@
                     <p><?php echo $propiedad['habitaciones'];?></p>
                 </li>
             </ul>
-            <a class="boton boton-amarillo-block" href="anuncio.php?id=<?php echo $propiedad['id'];?>">Ver Propiedad</a>
+            <a class="boton boton-amarillo-block" href="anuncio?id=<?php echo $propiedad['id'];?>">Ver Propiedad</a>
         </div> 
     </div> <!--Anuncio-->
     <?php endwhile; ?>
