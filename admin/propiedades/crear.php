@@ -3,17 +3,14 @@
     require '../../includes/app.php';
 
     use App\Propiedad; 
+    use App\Vendedor;
     use Intervention\Image\ImageManagerStatic as Image;
 
-    $auth = estaAutenticado();
-
-    $db = conectarDB();
+    estaAutenticado();
 
     $propiedad = new Propiedad;
 
-    //Consultar para obtener vendedores
-    $consulta = "SELECT * FROM vendedores;";
-    $resultado = mysqli_query($db, $consulta);
+    $vendedores = Vendedor::all();
 
     // Arreglo con mensajes de errores
     $errors = Propiedad::getErrores();
@@ -35,7 +32,7 @@
         }
 
         //Validamos
-        $errores = $propiedad->validar();
+        $errors = $propiedad->validar();
  
         //Revisar que el arreglo de errores esté vacio
         if(empty($errors)){

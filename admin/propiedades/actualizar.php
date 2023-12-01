@@ -1,6 +1,7 @@
 <?php
 
 use App\Propiedad;
+use App\Vendedor;
 use Intervention\Image\ImageManagerStatic as Image;
 
     require '../../includes/app.php';
@@ -18,9 +19,7 @@ use Intervention\Image\ImageManagerStatic as Image;
     //Consulta para obtener los datos de las propiedades
     $propiedad = Propiedad::find($id);
 
-    //Consultar para obtener vendedores
-    $consulta = "SELECT * FROM vendedores;";
-    $resultado = mysqli_query($db, $consulta);
+    $vendedores = Vendedor::all();
 
     // Arreglo con mensajes de errores
     $errors = Propiedad::getErrores();
@@ -47,12 +46,14 @@ use Intervention\Image\ImageManagerStatic as Image;
 
         //Revisar que el arreglo de errores esté vacio
         if(empty($errors)){
+            if($_FILES['propiedad']['tmp_name']['imagen']){
             //Almacenar la imagen
-            if ($_FILES['propiedad']['tmp_name']['imagen']){
-                $image->save(CARPETA_IMAGENES . $nombreImagen);
-            }
+                if ($_FILES['propiedad']['tmp_name']['imagen']){
+                    $image->save(CARPETA_IMAGENES . $nombreImagen);
+                }
 
-            $propiedad->guardar();
+                $propiedad->guardar();
+            }
         }
     }
     
@@ -60,7 +61,7 @@ use Intervention\Image\ImageManagerStatic as Image;
 ?>
 
     <main class="contenedor seccion">
-        <h1>Crear</h1>
+        <h1>Actualizar</h1>
 
         <a href="/admin/" class="boton boton-verde">Volver</a>
 

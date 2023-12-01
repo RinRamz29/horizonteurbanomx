@@ -29,8 +29,7 @@
         <h2>Casas y Depas en Venta</h2>
 
         <?php
-            $limite = 3;
-            include 'includes/templates/anuncios';
+            include 'includes/templates/anuncios.php';
         ?>
 
         <div class="alinear-derecha">
