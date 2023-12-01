@@ -41,7 +41,7 @@ class ActiveRecord{
          //Mensaje de exito
         if($resultado){
             //Redireccionar al usuario
-            header("Location: /admin?resultado=1");
+            header("Location: /admin/index.php?resultado=1");
         }
     }
  
@@ -60,7 +60,7 @@ class ActiveRecord{
         //Insertar en la base de datos
         if($resultado){
             //Redireccionar al usuario
-            header("Location: /admin?resultado=2");
+            header("Location: /admin/index.php?resultado=2");
         }
     }
  
@@ -72,7 +72,7 @@ class ActiveRecord{
  
         if($resultado) {
             $this->borrarImagen();
-            header('Location: /admin?resultado=3');
+            header('Location: /admin/index.php?resultado=3');
         }
     }
  
